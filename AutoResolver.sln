@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoResolver", "AutoResolver\AutoResolver.csproj", "{06352EFC-9A02-4BE7-A8C7-4757E77AF3BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoResolverTest", "AutoResolverTest\AutoResolverTest.csproj", "{684C8EDD-0931-445A-A330-62A3734CD4EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06352EFC-9A02-4BE7-A8C7-4757E77AF3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06352EFC-9A02-4BE7-A8C7-4757E77AF3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06352EFC-9A02-4BE7-A8C7-4757E77AF3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06352EFC-9A02-4BE7-A8C7-4757E77AF3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{684C8EDD-0931-445A-A330-62A3734CD4EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684C8EDD-0931-445A-A330-62A3734CD4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684C8EDD-0931-445A-A330-62A3734CD4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684C8EDD-0931-445A-A330-62A3734CD4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E650D34-A804-44B5-9E91-C538A326996C}
+	EndGlobalSection
+EndGlobal
