@@ -6,12 +6,13 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Company>LukeEntertainments</Company>
     <Authors>matrixlukan</Authors>
-    <Description>AutoResolver is a simple little library built to resolve classes bit more easily. Any class or interface can implement the following interfaces to register their class and resolve them in constructor or through service provider.</Description>
+    <Description>AutoResolver is a simple library built to resolve a service bit more easily. Any class or interface can implement the following interfaces to register their class and resolve them in constructor or through service provider.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/nakulLukan/AutoResolver</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nakulLukan/AutoResolver</RepositoryUrl>
     <PackageTags>resolver,auto,dependency,injection</PackageTags>
     <SignAssembly>true</SignAssembly>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
