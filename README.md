@@ -1,5 +1,5 @@
 # AutoResolver
-AutoResolver is a simple library built to resolve services bit more easily. Any class or interface can implement the following interfaces to register their class and resolve them in constructor or through service provider.
+AutoResolver is a simple library built to resolve services bit more easily. Any class or interface can implement the following interfaces to register their class and resolve them through service provider.
 - `IResolveTransient` to register the class with lifetime as transient.
 - `IResolveScoped` to register the class with lifetime as scoped.
 - `IResolveSingleton` to register the class with lifetime as singleton.
@@ -26,7 +26,7 @@ using AutoResolver;
 
 namespace AutoResolverTest
 {
-    public interface IResolveAsTransient : IResolveTransient
+    public interface IThisAsTransient : IResolveTransient
     {
         string GetMessage();
     }
@@ -35,17 +35,17 @@ namespace AutoResolverTest
 
 namespace AutoResolverTest
 {
-    public class ResolveAsTransient : IResolveAsTransient
+    public class ThisAsTransient : IThisAsTransient
     {
         public string GetMessage()
         {
-            return "This class has been resolved successfully";
+            return "Hi from resolved service (trainsient)";
         }
     }
 }
 ```
-Now you are done. You can now use the service provider (or constructor injection) to resolve the class. 
+Now you are done. You can now use the service provider (or inject) to resolve the service. 
 ```csharp
-var myResolvedClass = serviceProvider.GetRequiredService<IResolveAsTransient>();
+var myResolvedClass = serviceProvider.GetRequiredService<IThisAsTransient>();
 Console.WriteLine($"Text from resolved class: {myResolvedClass.GetMessage()}");
 ```
