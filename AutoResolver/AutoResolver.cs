@@ -25,10 +25,10 @@ namespace AutoResolver
             var transientServiceDescriptors = transients.Select(x => new ServiceDescriptor(x.TInterface, x.TClass, ServiceLifetime.Transient));
             services.TryAdd(transientServiceDescriptors);
 
-            var scopeServiceDescriptors = scopes.Select(x => new ServiceDescriptor(x.TInterface, x.TClass, ServiceLifetime.Transient));
+            var scopeServiceDescriptors = scopes.Select(x => new ServiceDescriptor(x.TInterface, x.TClass, ServiceLifetime.Scoped));
             services.TryAdd(scopeServiceDescriptors);
 
-            var singletonServiceDescriptors = singletons.Select(x => new ServiceDescriptor(x.TInterface, x.TClass, ServiceLifetime.Transient));
+            var singletonServiceDescriptors = singletons.Select(x => new ServiceDescriptor(x.TInterface, x.TClass, ServiceLifetime.Singleton));
             services.TryAdd(singletonServiceDescriptors);
 
             return services;
