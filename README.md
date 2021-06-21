@@ -1,5 +1,5 @@
 # AutoResolver
-AutoResolver is a simple library built to resolve classes bit more easily. Any class or interface can implement the following interfaces to register their class and resolve them in constructor or through service provider.
+AutoResolver is a simple library built to resolve services bit more easily. Any class or interface can implement the following interfaces to register their class and resolve them in constructor or through service provider.
 - `IResolveTransient` to register the class with lifetime as transient.
 - `IResolveScoped` to register the class with lifetime as scoped.
 - `IResolveSingleton` to register the class with lifetime as singleton.
