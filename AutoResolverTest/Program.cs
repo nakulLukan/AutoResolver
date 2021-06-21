@@ -1,4 +1,6 @@
 ﻿using AutoResolver;
+using AutoResolverTest.Interface;
+using AutoResolverTest.Service;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
@@ -13,9 +15,9 @@ namespace AutoResolverTest
                 .AddAutoResolver()
                 .BuildServiceProvider();
 
-            var myResolvedClass = serviceProvider.GetRequiredService<IResolveAsTransient>();
+            var myResolvedClass = serviceProvider.GetRequiredService<IResolveThisAsTransient>();
             var singletonClass = serviceProvider.GetRequiredService<ResolveAsSingleton>();
-            Console.WriteLine($"Text from resolved class: {myResolvedClass.GetMessage()}");
+            Console.WriteLine($"Text from resolved interface: {myResolvedClass.GetMessage()}");
             Console.WriteLine($"Text from singleton resolved class: {singletonClass.SingletonValue}");
         }
     }

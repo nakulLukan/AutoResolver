@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoResolver", "AutoResolve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoResolverTest", "AutoResolverTest\AutoResolverTest.csproj", "{684C8EDD-0931-445A-A330-62A3734CD4EE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoResolverTest.Interface", "AutoResolverTest.Interface\AutoResolverTest.Interface.csproj", "{CFDA27DB-630D-47AE-BD0C-528246E4542E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoResolverTest.Service", "AutoResolverTest.Service\AutoResolverTest.Service.csproj", "{CABB9602-97BE-4E08-8EDA-AA1630DAD3E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{684C8EDD-0931-445A-A330-62A3734CD4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{684C8EDD-0931-445A-A330-62A3734CD4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{684C8EDD-0931-445A-A330-62A3734CD4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFDA27DB-630D-47AE-BD0C-528246E4542E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFDA27DB-630D-47AE-BD0C-528246E4542E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFDA27DB-630D-47AE-BD0C-528246E4542E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFDA27DB-630D-47AE-BD0C-528246E4542E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CABB9602-97BE-4E08-8EDA-AA1630DAD3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CABB9602-97BE-4E08-8EDA-AA1630DAD3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CABB9602-97BE-4E08-8EDA-AA1630DAD3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CABB9602-97BE-4E08-8EDA-AA1630DAD3E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

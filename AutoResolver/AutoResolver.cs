@@ -43,21 +43,26 @@ namespace AutoResolver
         private static List<(Type TInterface, Type TClass)> GetClassImplementingInterfaces(Assembly assembly, Type typeToMatch)
         {
             // Get all interfaces which implements the IResolveTransient, IResolveScoped or IResolveSingleton
-            var interfaceImplementingResolver = assembly.ExportedTypes
-                .Where(type =>
-                {
-                    return type.GetInterfaces().Contains(typeToMatch) && type.IsInterface;
-                }).ToList();
+            var allDomainTypes = assembly.GetReferencedAssemblies()
+                .Select(x => Assembly.Load(x)).SelectMany(x => x.GetTypes());
+            var interfaceImplementingResolver = allDomainTypes
+                .Where(p => typeToMatch.IsAssignableFrom(p) && p.IsInterface && typeToMatch.FullName != p.FullName)
+                .ToList();
 
-            // Get all classes which implements the IResolveTransient, IResolveScoped or IResolveSingleton
-            var classImplementingResolver = assembly.ExportedTypes
-                .Where(type =>
-                {
-                    return type.GetInterfaces().Contains(typeToMatch) && type.IsClass;
-                }).ToList();
+            // Get all classes which implements the interface that implements IResolveTransient, IResolveScoped or IResolveSingleton
+            var classImplementingInterfaceThatImplementGivenType = allDomainTypes
+                .Where(type => type.IsClass && !type.IsAbstract && interfaceImplementingResolver.Any(x => x.IsAssignableFrom(type)))
+                .ToList();
 
+            // Get all classes which directly implements the IResolveTransient, IResolveScoped or IResolveSingleton
+            var classThatDirectlyImplmentGivenType = allDomainTypes
+                .Where(x => x.IsClass &&
+                !x.IsAbstract &&
+                typeToMatch.IsAssignableFrom(x) &&
+                !classImplementingInterfaceThatImplementGivenType.Contains(x))
+                .ToList();
             // Return the class and its corresponding interface for registration.
-            return classImplementingResolver.Select(type =>
+            return classImplementingInterfaceThatImplementGivenType.Union(classThatDirectlyImplmentGivenType).Select(type =>
             {
                 var interfaceImplementedByType = type.GetInterfaces().SingleOrDefault(x => interfaceImplementingResolver.Contains(x));
 

@@ -1,14 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>AutoResolverTest.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AutoResolverTest.Interface\AutoResolverTest.Interface.csproj" />
-    <ProjectReference Include="..\AutoResolverTest.Service\AutoResolverTest.Service.csproj" />
     <ProjectReference Include="..\AutoResolver\AutoResolver.csproj" />
   </ItemGroup>
 
