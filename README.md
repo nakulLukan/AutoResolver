@@ -39,7 +39,7 @@ namespace AutoResolverTest
     {
         public string GetMessage()
         {
-            return "Hi from resolved service (trainsient)";
+            return "Hi from resolved service (transient)";
         }
     }
 }
